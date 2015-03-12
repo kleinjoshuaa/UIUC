@@ -7,7 +7,7 @@ DBA3 was quite a serious course about Data Warehouseing.  I used [ Talend Open S
 OLAP databases use the [ star schema ](http://en.wikipedia.org/wiki/Star_schema) model which, which is one 'fact' in a table row that is associated in that same row with multiple 'dimension' keys, and those dimension keys are linked to dimension tables that hold more data about each of those dimensions. 
 
 <table class="image">
-<tr><td>![](db_files/star_schema.png)</td></tr>
+<tr><td>![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/star_schema.png)</td></tr>
 <tr><td class="caption"> An example Star Schema from the Wikipedia Page</td></tr>
 </table>
 
