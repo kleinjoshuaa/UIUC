@@ -12,4 +12,4 @@ Script to Create the DB: [dba2.sql](https://github.com/kleinjoshuaa/UIUC_Certifi
 
 DB backed up with mysqldump piped to bzip2: [final_project.sql.bz2](https://github.com/kleinjoshuaa/UIUC_Certificate/tree/master/dba2_files/final_project.sql.bz2)
 
-Staff table backed up with mysqldump (in old school html): [final_project.html](htpts://github.com/kleinjoshuaa/UIUC_Certificate/tree/master/dba2_files/final_project.html)
+Staff table backed up with mysqldump (in old school html): [final_project.html](http://github.com/kleinjoshuaa/UIUC_Certificate/tree/master/dba2_files/final_project.html)
