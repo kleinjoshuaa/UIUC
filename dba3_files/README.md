@@ -6,10 +6,9 @@ DBA3 was quite a serious course about Data Warehouseing.  I used [ Talend Open S
 
 OLAP databases use the [ star schema ](http://en.wikipedia.org/wiki/Star_schema) model which, which is one 'fact' in a table row that is associated in that same row with multiple 'dimension' keys, and those dimension keys are linked to dimension tables that hold more data about each of those dimensions. 
 
-<table class="image">
-<tr><td>![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/star_schema.png)</td></tr>
-<tr><td class="caption"> An example Star Schema from the Wikipedia Page</td></tr>
-</table>
+
+*   ![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/star_schema.png)
+*   An example Star Schema from the Wikipedia Page
 
 Now you may be asking yourself, well, what is a dimension? What is a fact? Simply put, a fact is a number that quantifies an action. It's sometimes referred to as a measure. Facts tell us the number of something where dimensions define information about that number. For example, to answer the question "How much in sales did we do by month?" The fact is the number of sales and the dimension is 'by month'. Or one could ask  'How many times users hit a website by month, country, and OS'. Month, country and OS would be dimensions and the number of hits would be a fact. However, there is also the case of 'factless facts'. Factless facts are facts that store whether an event happened or it did not. Factless facts are composed of dimensions, the fact column in a table for a factless fact is simply a bool TRUE if all of the dimensions in the table exist together. For example a fact table in the Sakila DVD rental data warehouse could store whether a customer created an account at a store on a specific day. The number that quantifies the action of creating an account is simply 1, or TRUE. 
 
