@@ -13,12 +13,12 @@ This organization of data is called an [ OLAP cube](http://en.wikipedia.org/wiki
  It works like this. MDX Queries are sent to the OLAP server. Then the OLAP server consults a schema to determine how best it can answer the query. After that, the server will then either consult it’s internal cache or generate SQL to answer the query. Then, after that the data is returned to you. 
 
 Here’s an example of what JPivot looks like after running a query on the HR data cube I generated for my final project: 
-![](db_files/query.png)
+![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/query.png)
 
 For my final project for DBA4, I created an XML schema for Mondrian. This schema creates a new cube called **HR**. This cube contains 5 dimensions and 3 measures related to questions that could come up by the HR department of a company, such as employee salaries, store employee counts, and so on. The source MySQL data warehouse used is the _FoodMart 2000_ sample database that was shipped with Microsoft SQL Server 2000 Analysis Services.
 
-Here is the [FoodMart 2000 SQL Database](db_files/foodmart.sql.bz2).
+Here is the [FoodMart 2000 SQL Database](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba4_files/foodmart.sql.bz2).
 
- And here is the [ My XML Schema for Mondrian ](db_files/dba4_fp.xml) I generated.
+ And here is the [ My XML Schema for Mondrian ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba4_files/dba4_fp.xml) I generated.
 
- To test the XML schema, I wrote a selection of [ MDX queries for FoodMart](db_files/dba4_queries.tar.bz2).
+ To test the XML schema, I wrote a selection of [ MDX queries for FoodMart](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba4_files/dba4_queries.tar.bz2).
