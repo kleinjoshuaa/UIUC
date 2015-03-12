@@ -19,6 +19,6 @@ For my final project for DBA4, I created an XML schema for Mondrian. This schema
 
 Here is the [FoodMart 2000 SQL Database](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba4_files/foodmart.sql.bz2).
 
- And here is the [ My XML Schema for Mondrian ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba4_files/dba4_fp.xml) I generated.
+ And here is the [ My XML Schema for Mondrian ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba4_files/final_project.xml) I generated.
 
  To test the XML schema, I wrote a selection of [ MDX queries for FoodMart](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba4_files/dba4_queries.tar.bz2).
