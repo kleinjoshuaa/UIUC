@@ -27,16 +27,16 @@ TOS greatly simplifies the process of pulling data from many other sources and a
 
 Below you can see the screenshots for both of my data warehouse models. These data warehouses also include tables that log each run and each of the tables has a 'run_id' column that allows auditing to determing which run added that specific column to the data warehouse.
 
-
+*   The ETL model that creates the Northwind Traders data warehouse
 ![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/nwt.png)
-*   The ETL model that creates the Northwind Traders data warehouse (save as for full res)
-</table>
 
 
-![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/sakiladw.png)
+
 *   The ETL model that creates the Sakila data warehouse 
+![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/sakiladw.png)
 
- And here you can get the data warehouses I created using TOS:
+
+And here you can get the data warehouses I created using TOS:
 
 *   [ Sakila ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/sakiladw.sql)
 *   [ Northwind Traders ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/Northwinddw.sql)
