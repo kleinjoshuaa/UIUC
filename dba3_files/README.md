@@ -21,23 +21,23 @@ Now you may be asking yourself, well, what is a dimension? What is a fact? Simpl
 
 It is possible to create a dimension table with different columns being different SCD types as well. For example in the dimCustomer dimension for the Sakila data warehouse you could make your Last_Name column in a dimension table Type 1 if you don't really care when people changed their name, but make their address column a Type 2 because those are more important to keep track of where your customers are moving over time.
 
- Now another question would be, well, where do you get the data for your Data Warehouse? Good question, because this is where Talend Open Studio (TOS) comes in. TOS is an Extract-Transform-Load (ETL) tool. What is ETL? ETL is a process by which data is transferred from other data sources (including OLTP databases, Excel files, CSV files, etc.) into an OLAP database for data warehousing. I put together a text file to describe the data transformations used for creating the Sakila data warehouse from the Sakila OLTP database. You can get that [ here ](db_files/dimensions.txt).
+ Now another question would be, well, where do you get the data for your Data Warehouse? Good question, because this is where Talend Open Studio (TOS) comes in. TOS is an Extract-Transform-Load (ETL) tool. What is ETL? ETL is a process by which data is transferred from other data sources (including OLTP databases, Excel files, CSV files, etc.) into an OLAP database for data warehousing. I put together a text file to describe the data transformations used for creating the Sakila data warehouse from the Sakila OLTP database. You can get that [ here ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dimensions.txt).
 
 TOS greatly simplifies the process of pulling data from many other sources and allowing the user to create reusable project flowgraphs that can be re-run any time the source data changes. 
 
 Below you can see the screenshots for both of my data warehouse models. These data warehouses also include tables that log each run and each of the tables has a 'run_id' column that allows auditing to determing which run added that specific column to the data warehouse.
 
 <table class="image">
-<tr><td>![](db_files/nwt.png)</td></tr>
+<tr><td>![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/nwt.png)</td></tr>
 <tr><td class="caption"> The ETL model that creates the Northwind Traders data warehouse (save as for full res)</td></tr>
 </table>
 
 <table class="image">
-<tr><td>![](db_files/sakiladw.png)</td></tr>
+<tr><td>![](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/sakiladw.png)</td></tr>
 <tr><td class="caption"> The ETL model that creates the Sakila data warehouse (save as for full res)</td></tr>
 </table>
 
  And here you can get the data warehouses I created using TOS:
 
-*   [ Sakila ](db_files/sakiladw.sql)
-*   [ Northwind Traders ](db_files/Northwinddw.sql)
+*   [ Sakila ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/sakiladw.sql)
+*   [ Northwind Traders ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/Northwinddw.sql)
