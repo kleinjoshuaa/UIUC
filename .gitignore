@@ -1,3 +1,5 @@
 mysql/share
 mysql/exec
 mysql/include
+mysql/libexec
+*.pdf
