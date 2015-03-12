@@ -38,5 +38,5 @@ Below you can see the screenshots for both of my data warehouse models. These da
 
 And here you can get the data warehouses I created using TOS:
 
-*   [ Sakila ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/sakiladw.sql)
-*   [ Northwind Traders ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/Northwinddw.sql)
+*   [ Sakila ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba3_files/sakiladw.sql)
+*   [ Northwind Traders ](https://raw.githubusercontent.com/kleinjoshuaa/UIUC_Certificate/master/dba3_files/Northwinddw.sql)
