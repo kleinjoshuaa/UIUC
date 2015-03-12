@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<resultset statement="select first_name, last_name from staff
+" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row>
+	<field name="first_name">Mike</field>
+	<field name="last_name">Hillyer</field>
+  </row>
+
+  <row>
+	<field name="first_name">Jon</field>
+	<field name="last_name">Stephens</field>
+  </row>
+
+  <row>
+	<field name="first_name">Dave</field>
+	<field name="last_name">Smith</field>
+  </row>
+</resultset>

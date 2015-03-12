@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="http://courses.oreillyschool.com/dba4/schema/MetaData.xsl" type="text/xsl"?>
+<Schema name="My First Schema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://courses.oreillyschool.com/dba4/schema/Mondrian.xsd">
+	<Dimension name="Time" type="TimeDimension">
+		<Hierarchy hasAll="true" primaryKey="time_id">
+			<Table name="time_by_day"/>
+			<Level name="Year" column="the_year" type="Numeric" uniqueMembers="true" levelType="TimeYears"/>
+			<Level name="Quarter" column="quarter" uniqueMembers="false" levelType="TimeQuarters"/>
+			<Level name="Month" column="month_of_year" uniqueMembers="false" type="Numeric" levelType="TimeMonths"/>
+			<Level name="Day" column="day_of_month" uniqueMembers="false" type="Numeric" levelType="TimeDays"/>
+		</Hierarchy>
+	</Dimension>
+	<Dimension name = "Product">
+		<Hierarchy hasAll="true" primaryKey="product_id" primaryKeyTable="product">
+			<Join leftKey="product_class_id" rightKey="product_class_id">
+				<Table name="product"/>
+				<Table name="product_class"/>
+			</Join>
+			<Level name="Product Family" table="product_class" column="product_family" uniqueMembers="true"/>
+			<Level name="Product Department" table="product_class" column="product_department" uniqueMembers="false"/>
+			<Level name="Product Category" table="product_class" column="product_category" uniqueMembers="false"/>
+			<Level name="Product Subcategory" table="product_class" column="product_subcategory" uniqueMembers="false"/>
+			<Level name="Brand Name" table="product" column="brand_name" uniqueMembers="false"/>
+			<Level name="Product Name" table="product" column="product_name" uniqueMembers="true">
+			<Property name="SKU" column="SKU"/>
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension name="Warehouse">
+		<Hierarchy hasAll="true" primaryKey="warehouse_id">
+			<Table name="warehouse"/>
+			<Level name="Country" column="warehouse_country" type="String" uniqueMembers="true"/>
+			<Level name="State Province" column="warehouse_state_province" uniqueMembers="false" type="String"/>
+			<Level name="City" column="warehouse_city" uniqueMembers="false" type="String"/>
+			<Level name="Warehouse Name" column="warehouse_name" uniqueMembers="true" type="String"/>
+		</Hierarchy>
+	</Dimension>
+	<Cube name="Warehouse">
+		<Table name="inventory_fact"/>
+		<DimensionUsage name="Time" source="Time" foreignKey="time_id"/>
+		<DimensionUsage name="Product" source="Product" foreignKey="product_id"/>
+		<DimensionUsage name="Warehouse" source="Warehouse" foreignKey="warehouse_id"/>
+		<Measure name="Store Invoice" column="store_invoice" aggregator="sum" formatString="Standard"/>
+		<Measure name="Supply Time" column="supply_time" aggregator="sum" formatString="Standard"/>
+		<Measure name="Warehouse Cost" column="warehouse_cost" aggregator="sum" formatString="Standard"/>
+		<Measure name="Warehouse Sales" column="warehouse_sales" aggregator="sum" formatString="Standard"/>
+		<Measure name="Units Shipped" column="units_shipped" aggregator="sum" formatString="Standard"/>
+		<Measure name="Units Ordered" column="units_ordered" aggregator="sum" formatString="Standard"/>	
+	</Cube>
+	<Cube name="Sales">
+		<Table name="sales_fact"/>
+		<Dimension name="Promotion" foreignKey="promotion_id">
+			<Hierarchy hasAll="true" primaryKey="promotion_id">
+				<Table name="promotion"/>
+				<Level name="Promotion Name" column="promotion_name" uniqueMembers="false" type="String"/>
+				<Level name="Promotion Media" column="media_type" uniqueMembers="false" type="String"/>
+			</Hierarchy>
+		</Dimension>
+		<DimensionUsage name="Time" source="Time" foreignKey="time_id"/>
+		<DimensionUsage name="Product" source="Product" foreignKey="product_id"/>
+		<Dimension name="Customers" foreignKey="customer_id">
+			<Hierarchy hasAll="true" allMemberName="All Customers" primaryKey="customer_id">
+				<Table name="customer"/>
+				<Level name="Country" column="country" uniqueMembers="true"/>
+				<Level name="State Province" column="state_province" uniqueMembers="true"/>
+				<Level name="City" column="city" uniqueMember="false"/>
+				<Level name="Name" column="customer_id" nameColumn="fullname" type="Numeric" uniqueMembers="true">
+					<Property name="Gender" column="gender"/>
+					<Property name="Marital Status" column="marital_status"/>
+					<Property name="Education" column="education"/>
+					<Property name="Yearly Income" column="yearly_income"/>
+				</Level>
+			</Hierarchy>
+		</Dimension>
+		<Measure name="Unit Sales" column="unit_sales" aggregator="sum" formatString="Standard"/>
+		<Measure name="Store Sales" column="store_sales" aggregator="sum" formatSTring="Standard"/>
+		<Measure name="Store Cost" column="store_cost" aggregator="sum" formatString="Standard"/>
+		<CalculatedMember name="Profit" dimension="Measures">
+			<Formula>[Measures].[Store Sales] -  [Measures].[Store Cost]</Formula>
+			<CalculatedMemberProperty name="FORMAT_STRING" value="$#,##0.00"/>
+		</CalculatedMember>
+		<NamedSet name="Top Five Percent">
+			<Formula>TopPercent(Descendants([Product],[Product].[Drink].[Alcoholic Beverages].[Beer and Wine].[Beer].[Good]), 5, [Measures].[Unit Sales])</Formula>
+		 </NamedSet>
+	</Cube>
+	<VirtualCube name="Warehouse and Sales">
+		<VirtualCubeDimension name="Product"/>
+		<VirtualCubeDimension name="Time"/>
+		<VirtualCubeDimension cubeName="Sales" name="Customers"/>
+		<VirtualCubeDimension cubeName="Warehouse" name="Warehouse"/>
+		<VirtualCubeMeasure cubeName="Sales" name="[Measures].[Store Sales]"/>
+		<VirtualCubeMeasure cubeName="Warehouse" name="[Measures].[Warehouse Sales]"/>
+	</VirtualCube>
+	<VirtualCube name="Simple Cube">
+		<VirtualCubeDimension name="Time"/>
+		<VirtualCubeDimension name="Product"/>
+		<VirtualCubeMeasure cubeName="Warehouse" name="[Measures].[Warehouse Sales]"/>
+		<VirtualCubeMeasure cubeName="Sales" name="[Measures].[Unit Sales]"/>
+	</VirtualCube>
+</Schema>

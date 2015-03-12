@@ -1,0 +1,12 @@
+WITH
+ member [Measures].[Order Difference]
+as [Measures].[Units Ordered] - [Measures].[Units Shipped]
+
+member [Measures].[Expected Order Difference] as 1600
+
+member [Measures].[Monthly Difference] as [Measures].[Expected Order Difference] - [Measures].[Order Difference], FORMAT_STRING = "|0|style='green';|(0)|style='red'"
+
+select
+[Time].[1997] ON ROWS,
+{[Measures].[Order Difference], [Measures].[Monthly Difference] } on COLUMNS
+from [Warehouse]

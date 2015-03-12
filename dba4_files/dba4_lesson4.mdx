@@ -1,0 +1,10 @@
+WITH
+ member [Measures].[Order Difference]
+as [Measures].[Units Ordered] - [Measures].[Units Shipped], FORMAT_STRING = "|0|style='green';|(0)|style='red'"
+
+
+
+select
+[Time].[1997] ON ROWS,
+{[Measures].[Order Difference] } on COLUMNS
+from [Warehouse]

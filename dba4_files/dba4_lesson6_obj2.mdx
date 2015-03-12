@@ -1,0 +1,16 @@
+/* Re-writing the query at the end of the lesson */
+
+WITH
+set [Beverages]
+as { [Time].[1998] } * { [Product].[Drink].[Beverages].[Hot Beverages].Children}
+member [Measures].[All Parent] as (Ancestor([Product].CurrentMember, 1) , [Measures].[Unit Sales])
+member [Measures].[% of Parent] as ([Product].CurrentMember , [Measures].[Unit Sales]) / [Measures].[All Parent]
+, FORMAT_STRING="Percent"
+select
+{ [Measures].[Unit Sales], [Measures].[All Parent], [Measures].[% of Parent] }
+ON COLUMNS,
+ [Beverages] ON ROWS
+from [Sales]
+
+
+

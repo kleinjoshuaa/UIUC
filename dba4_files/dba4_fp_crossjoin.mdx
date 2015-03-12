@@ -1,0 +1,13 @@
+/* Cross Join */
+
+/* What are the average salaries by department by store */
+
+select
+
+{  Descendants([Department]) }
+* 
+{ [Measures].[Average Salary] }
+
+ON COLUMNS,
+ Descendants([Store]) ON ROWS
+from [HR]

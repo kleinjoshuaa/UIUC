@@ -1,0 +1,16 @@
+/* Top/Bottom and Generate */
+
+/* Top 5 Paid Employees in 1997 and in 1998 */
+
+select
+{ [Measures].[Salary] } ON COLUMNS,
+Generate (
+{ [Time].[1997], [Time].[1998] } ,
+	TopCount(
+		( { [Time].CurrentMember } * Descendants([Employee], [Employee].[Employee]) ),
+		5,
+		[Measures].[Salary]
+		)
+	)
+ ON ROWS
+from [HR]

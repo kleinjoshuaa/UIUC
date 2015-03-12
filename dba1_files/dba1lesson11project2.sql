@@ -1,0 +1,6 @@
+/* Four queries, unioned. The first two don't use query expansion, the last two do. */
+
+select Artists.ArtistName as 'Artist', Albums.Title as 'Album Title', 'Girl' as 'Query', 'No' as 'QueryExpansion'  FROM Artists JOIN Albums on (Albums.ArtistID = Artists.ArtistID) WHERE MATCH(Albums.Title, Albums.AlbumDescription) AGAINST ('Girl') UNION
+select Artists.ArtistName as 'Artist', Albums.Title as 'Album Title', 'Gold' as 'Query', 'No' as 'QueryExpansion'  FROM Artists JOIN Albums on (Albums.ArtistID = Artists.ArtistID) WHERE MATCH(Albums.Title, Albums.AlbumDescription) AGAINST ('Gold') UNION
+select Artists.ArtistName as 'Artist', Albums.Title as 'Album Title', 'Girl' as 'Query', 'Yes' as 'QueryExpansion'  FROM Artists JOIN Albums on (Albums.ArtistID = Artists.ArtistID) WHERE MATCH(Albums.Title, Albums.AlbumDescription) AGAINST ('Girl' WITH QUERY EXPANSION) UNION
+select Artists.ArtistName as 'Artist', Albums.Title as 'Album Title', 'Gold' as 'Query', 'Yes' as 'QueryExpansion'  FROM Artists JOIN Albums on (Albums.ArtistID = Artists.ArtistID) WHERE MATCH(Albums.Title, Albums.AlbumDescription) AGAINST ('Gold' WITH QUERY EXPANSION);

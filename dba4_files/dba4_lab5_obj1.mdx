@@ -1,0 +1,5 @@
+select 
+	[Store Type].Children on ROWS,
+
+	{[Time].[1997], [Time].[1998]} * [Measures].[Units Ordered]  on Columns
+from [Warehouse]

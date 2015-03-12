@@ -1,0 +1,22 @@
+/* slicing and filtering */
+
+/* What was the hourly vs monthly  count of employees in stores with more than 300 employees in the year 1997? */
+
+
+with 
+set [High Staffed Stores]
+as FILTER(
+{ Descendants([Store].[USA]) }
+* 
+{ [Measures].[Employee Count] }, 
+[Measures].[Employee Count] > 300
+)
+
+
+select
+
+ [High Staffed Stores]
+ON Rows,
+ {[Pay Type].[Pay Type].[Monthly], [Pay Type].[Pay Type].[Hourly]} ON Columns
+from [HR]
+ WHERE [Time].[1997]

@@ -1,0 +1,1 @@
+select A.Firstname, A.LastName, Count(*) as 'Number of Purchased Songs' FROM ATunesCustomers as A JOIN Purchases as P on (P.CustomerID = A.CustomerID) GROUP BY A.CustomerID ORDER BY 'Number of Purchased Songs' DESC LIMIT 0,5;

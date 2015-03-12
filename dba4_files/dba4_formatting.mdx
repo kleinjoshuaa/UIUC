@@ -1,0 +1,13 @@
+WITH
+ member [Measures].[My Profit]
+as [Measures].[Store Sales] - [Measures].[Store Cost], FORMAT_STRING = "$#,##0"
+
+member [Measures].[Goal] as 395000, FORMAT_STRING = "$#,##0"
+
+member [Measures].[Goal Difference] as
+ [Measures].[My Profit] - [Measures].[Goal], FORMAT_STRING = "|$#,##0|style='green';|($#,##0)|style='red'"
+
+select
+[Time].[1997] ON ROWS,
+{[Measures].[My Profit], [Measures].[Goal], [Measures].[Goal Difference] } on COLUMNS
+from [Sales]

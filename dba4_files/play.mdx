@@ -1,0 +1,15 @@
+With
+member [Measures].[Profit Per Sale] as 
+ [Measures].[Profit] / [Measures].[Sales Count], FORMAT_STRING = "$#.00"
+
+member [Measures].[Goal per Sale] as 4
+
+member [Measures].[Goal Dif] as
+ [Measures].[Goal per Sale] - [Measures].[Profit Per Sale], FORMAT_STRING = "|$#,##0.00|style='green';|($#,##0.00)|style='red';\Z\E\R\O;\Z\E\R\O"
+
+SELECT {DESCENDANTS([Store], [Store].[Store Name])} on ROWS,
+
+([Measures].[Goal Dif] * UNION([Time].[1997].Children, [Time].[1998].Children)) on COLUMNS
+	
+from [Sales]
+WHERE {[Product].[Drink]} 

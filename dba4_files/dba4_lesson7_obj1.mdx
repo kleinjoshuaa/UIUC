@@ -1,0 +1,8 @@
+WITH
+ member [Measures].[Current Unit Sales] as ( [Time].CurrentMember, [Measures].[Unit Sales] )
+ member [Measures].[Prior Unit Sales] as ( [Time].CurrentMember.PrevMember, [Measures].[Unit Sales] )
+ member [Measures].[% Diff] as ([Measures].[Current Unit Sales] - [Measures].[Prior Unit Sales]) / [Measures].[Prior Unit Sales], FORMAT_STRING="Percent"
+select
+{ [Measures].[Current Unit Sales], [Measures].[Prior Unit Sales], [Measures].[% Diff]  } ON COLUMNS,
+{ [Time].[1997].[Q1].[1]:[Time].[1998].[Q4].[12] } on ROWS
+from [Sales]

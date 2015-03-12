@@ -1,0 +1,17 @@
+/* Hierarchies */
+
+/* Show the % of employees that are employeed at each store */
+
+ WITH
+ member [Measures].[All Employees] as (	[Store].[All Stores], [Measures].[Employee Count]) 
+ 
+member [Measures].[% of All Employees] as ([Store].CurrentMember , [Measures].[Employee Count]) / [Measures].[All Employees] 
+, FORMAT_STRING="Percent" 
+
+
+select
+{ [Measures].[Employee Count], [Measures].[All Employees], [Measures].[% of All Employees]
+}
+ON COLUMNS,
+ [Store].MEMBERS ON ROWS
+from [HR]

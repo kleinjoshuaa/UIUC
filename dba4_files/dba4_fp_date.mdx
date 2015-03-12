@@ -1,0 +1,16 @@
+/* Date Function */
+
+/* Compare the number of Employees from 1998 to the same date 1 year ago in 1997 */
+
+WITH
+ member [Measures].[Current Employee Count] as ([Time].CurrentMember, [Measures].[Employee Count])
+ member [Measures].[Prior Employee Count] as (
+ 			ParallelPeriod([Time].[Year], 1, [Time].CurrentMember),
+ 			[Measures].[Employee Count]
+ 			)
+ member [Measures].[Diff] as [Measures].[Current Employee Count] - [Measures].[Prior Employee Count]
+
+select
+{ [Measures].[Current Employee Count], [Measures].[Prior Employee Count], [Measures].[Diff]  } ON COLUMNS,
+{ [Time].[1997].[Q1].[1]:[Time].[1998].[Q4].[12] } on ROWS
+from [HR]

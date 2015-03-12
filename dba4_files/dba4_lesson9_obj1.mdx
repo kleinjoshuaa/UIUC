@@ -1,0 +1,16 @@
+with member
+[Measures].[Sales Trend]
+as
+LinRegPoint(
+	Rank(Time.CurrentMember, Time.CurrentMember.Level.MEMBERS),
+	Descendants( [Time].[1998] , [Time].CurrentMember.Level),
+	[Measures].[Unit Sales],
+	Rank(Time.CurrentMember, Time.CurrentMember.Level.MEMBERS)
+	)
+select
+	{ [Measures].[Unit Sales], [Measures].[Sales Trend] } on columns, 
+	Union(
+		Descendants( [Time].[1998], [Time].[1998].[Q1].[1].[1]),
+		Descendants( [Time].[1999], [Time].[1998].[Q1].[1].[1])
+		) on rows
+from [Sales]

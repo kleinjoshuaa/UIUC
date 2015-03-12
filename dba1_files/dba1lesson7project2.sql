@@ -1,0 +1,1 @@
+UPDATE CustomerAccounts SET CurrentCredit = CASE WHEN CurrentCredit < 16 THEN CurrentCredit + 1  WHEN CurrentCredit >= 16 AND CurrentCredit <=30 THEN CurrentCredit + 2 WHEN CurrentCredit > 30 THEN Ceil(CurrentCredit*1.1)  END;

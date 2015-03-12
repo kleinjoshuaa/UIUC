@@ -1,0 +1,5 @@
+select 
+	Descendants([Warehouse], [Warehouse].[Warehouse Name]) on ROWS,
+
+	{[Time].[1998]} * [Measures].[Units Shipped]  on Columns
+from [Warehouse]

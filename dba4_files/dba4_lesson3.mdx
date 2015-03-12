@@ -1,0 +1,7 @@
+select 
+{
+{[Time].[1997].[Q1].[2], [Time].[1998].[Q1].[2]}
+}
+ ON ROWS,
+  {[Measures].[Store Cost], [Measures].[Store Sales]} on COLUMNS
+ from [Sales]

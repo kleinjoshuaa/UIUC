@@ -1,0 +1,12 @@
+WITH
+ set [Prime Stores] as {
+ 	[USA].[CA].[Los Angeles].[Store 7],
+ 	[USA].[OR].[Portland].[Store 11],
+ 	[USA].[OR].[Salem].[Store 13],
+ 	[USA].[WA].[Bremerton].[Store 3]
+ }
+
+select
+([Time].[1997], [Measures].[Warehouse Cost]) ON Columns,
+[Prime Stores]  on Rows
+from [Warehouse]

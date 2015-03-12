@@ -1,0 +1,12 @@
+select
+{ [Measures].[Unit Sales] } ON COLUMNS,
+Generate (
+{ [Time].[1998].[Q1].Children, [Time].[1998].[Q2].Children,[Time].[1998].[Q3].Children,[Time].[1998].[Q4].Children } ,
+	TopCount(
+		( { [Time].CurrentMember } * Descendants([Product], [Product].[Product Name]) ),
+		3,
+		[Measures].[Unit Sales]
+		)
+	)
+ ON ROWS
+from [Sales]

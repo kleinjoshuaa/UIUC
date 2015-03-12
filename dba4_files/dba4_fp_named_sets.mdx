@@ -1,0 +1,21 @@
+/* Named Sets */
+/* Let's say I live in British Columbia and have a few favorite stores I like to check the stats on*/
+
+
+WITH
+set [Favorite Stores] as
+{
+ [Store].[USA].[WA].[Bellingham].[Store 2],
+ [Store].[Canada].[BC].[Vancouver].[Store 19],
+ [Store].[Canada].[BC].[Victoria].[Store 20]
+	  
+}
+
+SELECT
+[Favorite Stores]
+on rows,
+
+{[Measures].[Average Salary], [Measures].[Employee Count]}
+on columns
+
+from [HR]

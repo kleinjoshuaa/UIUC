@@ -1,0 +1,14 @@
+/* This gets me the 5 worst selling items from 1997 and 1998 */
+
+select
+{ [Measures].[Unit Sales] } on columns, 
+Generate (
+	{ [Time].[1997], [Time].[1998] }
+	,
+	BottomCount(
+		( { [Time].CurrentMember } * DESCENDANTS([Product], [Product].[Product Name])),
+		5,
+		[Measures].[Unit Sales] )
+)
+  on ROWS
+from [Sales]

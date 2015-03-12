@@ -1,0 +1,14 @@
+with
+set [Beverages]
+as
+FILTER(
+{ [Time].[1998] } * { Descendants([Product].[Food].[Snack Foods], [Product].[Product Name]) }, [Measures].[Units Shipped] > 400)
+
+
+ 
+select
+{ [Measures].[Units Shipped]}
+
+on columns,
+ [Beverages] on ROWS
+from [Warehouse]

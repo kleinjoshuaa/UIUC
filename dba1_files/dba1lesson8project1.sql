@@ -1,0 +1,1 @@
+SELECT Artists.ArtistName, Albums.Title, Albums.YearReleased, Albums.NumberOfSongs FROM Artists JOIN Albums on (Artists.ArtistID = Albums.ArtistID) WHERE Albums.NumberOfSongs = (select MAX(Albums.NumberOfSongs) FROM Albums);

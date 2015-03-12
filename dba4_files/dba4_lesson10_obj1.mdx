@@ -1,0 +1,12 @@
+SELECT
+{ [Measures].[Store Invoice], 
+[Measures].[Supply Time],
+[Measures].[Warehouse Cost], 
+[Measures].[Warehouse Sales], 
+[Measures].[Units Shipped], 
+[Measures].[Units Ordered] 
+}
+on COLUMNS,
+{ [Warehouse].Children } on ROWS
+
+FROM [Warehouse]

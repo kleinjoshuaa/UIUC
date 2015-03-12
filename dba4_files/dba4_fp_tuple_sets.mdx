@@ -1,0 +1,13 @@
+/* Tuples and Sets */
+/* This query shows splits the Employees into hourly and monthly and shows their wages */
+
+
+select
+{
+([Measures].[Salary],[Pay Type].[Pay Type].[Hourly]),
+([Measures].[Salary],[Pay Type].[Pay Type].[Monthly])
+}
+on columns,
+ Descendants([Employee] )
+on rows
+from [HR]

@@ -1,0 +1,1 @@
+SELECT Artists.ArtistID, Artists.ArtistName as Artist, Albums.Title as Album, Albums.YearReleased as Year, Albums.NumberOfSongs as Tracks FROM Albums JOIN Artists on (Artists.ArtistID = Albums.ArtistID);

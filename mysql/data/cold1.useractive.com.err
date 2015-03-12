@@ -1,0 +1,282 @@
+120614 20:39:00 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120614 20:39:00 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120614 20:39:00  InnoDB: Initializing buffer pool, size = 8.0M
+120614 20:39:00  InnoDB: Completed initialization of buffer pool
+InnoDB: The first specified data file ./ibdata1 did not exist:
+InnoDB: a new database to be created!
+120614 20:39:00  InnoDB: Setting file ./ibdata1 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+120614 20:39:00  InnoDB: Log file ./ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile0 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+120614 20:39:00  InnoDB: Log file ./ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile1 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+120614 20:39:01  InnoDB: Started; log sequence number 0 0
+120614 20:39:01 [Note] Event Scheduler: Loaded 0 events
+120614 20:39:01 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120614 20:49:18 mysqld_safe A mysqld process already exists
+120614 20:49:27 mysqld_safe A mysqld process already exists
+120614 20:49:36 mysqld_safe A mysqld process already exists
+120614 20:55:01 mysqld_safe A mysqld process already exists
+120614 20:57:40 mysqld_safe A mysqld process already exists
+120614 20:58:41 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120614 20:58:41 [Note] Event Scheduler: Purging the queue. 0 events
+120614 20:58:41  InnoDB: Starting shutdown...
+120614 20:58:42  InnoDB: Shutdown completed; log sequence number 0 44233
+120614 20:58:42 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120614 20:58:42 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120614 21:01:47 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+Could not open required defaults file: /users/certjosh/mysql/my.cnf
+Fatal error in defaults handling. Program aborted
+120614 21:01:47  InnoDB: Initializing buffer pool, size = 8.0M
+120614 21:01:47  InnoDB: Completed initialization of buffer pool
+120614 21:01:47  InnoDB: Started; log sequence number 0 44233
+120614 21:01:47 [ERROR] Can't start server: Bind on TCP/IP port: Address already in use
+120614 21:01:47 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+120614 21:01:47 [ERROR] Aborting
+
+120614 21:01:47  InnoDB: Starting shutdown...
+120614 21:01:53  InnoDB: Shutdown completed; log sequence number 0 44233
+120614 21:01:53 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120614 21:01:53 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120614 21:02:23 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+Could not open required defaults file: /users/certjosh/mysql/my.cnf
+Fatal error in defaults handling. Program aborted
+120614 21:02:24  InnoDB: Initializing buffer pool, size = 8.0M
+120614 21:02:24  InnoDB: Completed initialization of buffer pool
+120614 21:02:24  InnoDB: Started; log sequence number 0 44233
+120614 21:02:24 [ERROR] Can't start server: Bind on TCP/IP port: Address already in use
+120614 21:02:24 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+120614 21:02:24 [ERROR] Aborting
+
+120614 21:02:24  InnoDB: Starting shutdown...
+120614 21:02:29  InnoDB: Shutdown completed; log sequence number 0 44233
+120614 21:02:29 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120614 21:02:29 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120614 21:03:00 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120614 21:03:00 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120614 21:03:00  InnoDB: Initializing buffer pool, size = 8.0M
+120614 21:03:00  InnoDB: Completed initialization of buffer pool
+120614 21:03:00  InnoDB: Started; log sequence number 0 44233
+120614 21:03:00 [Note] Event Scheduler: Loaded 0 events
+120614 21:03:00 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120614 21:03:12 mysqld_safe A mysqld process already exists
+120614 21:04:13 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120614 21:04:13 [Note] Event Scheduler: Purging the queue. 0 events
+120614 21:04:13  InnoDB: Starting shutdown...
+120614 21:04:15  InnoDB: Shutdown completed; log sequence number 0 44233
+120614 21:04:15 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120614 21:04:15 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120614 21:05:14 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120614 21:05:14 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120614 21:05:14  InnoDB: Initializing buffer pool, size = 8.0M
+120614 21:05:14  InnoDB: Completed initialization of buffer pool
+120614 21:05:14  InnoDB: Started; log sequence number 0 44233
+120614 21:05:14 [Note] Event Scheduler: Loaded 0 events
+120614 21:05:14 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120614 21:05:32 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120614 21:05:32 [Note] Event Scheduler: Purging the queue. 0 events
+120614 21:05:32  InnoDB: Starting shutdown...
+120614 21:05:34  InnoDB: Shutdown completed; log sequence number 0 44233
+120614 21:05:34 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120614 21:05:34 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120615 06:04:18 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120615  6:04:18 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120615  6:04:18  InnoDB: Initializing buffer pool, size = 8.0M
+120615  6:04:18  InnoDB: Completed initialization of buffer pool
+120615  6:04:18  InnoDB: Started; log sequence number 0 44233
+120615  6:04:18 [Note] Event Scheduler: Loaded 0 events
+120615  6:04:18 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120615 18:25:50 mysqld_safe A mysqld process already exists
+120615 18:26:10 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120615 18:26:10 [Note] Event Scheduler: Purging the queue. 0 events
+120615 18:26:10  InnoDB: Starting shutdown...
+120615 18:26:14  InnoDB: Shutdown completed; log sequence number 0 6970915
+120615 18:26:14 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120615 18:26:14 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120615 18:26:22 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120615 18:26:22 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120615 18:26:22  InnoDB: Initializing buffer pool, size = 8.0M
+120615 18:26:22  InnoDB: Completed initialization of buffer pool
+120615 18:26:22  InnoDB: Started; log sequence number 0 6970915
+120615 18:26:22 [Note] Event Scheduler: Loaded 0 events
+120615 18:26:22 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120615 18:26:42 mysqld_safe A mysqld process already exists
+120615 18:27:01 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120615 18:27:01 [Note] Event Scheduler: Purging the queue. 0 events
+120615 18:27:01  InnoDB: Starting shutdown...
+120615 18:27:03  InnoDB: Shutdown completed; log sequence number 0 6970915
+120615 18:27:03 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120615 18:27:03 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120615 18:27:47 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120615 18:27:47 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120615 18:27:47  InnoDB: Initializing buffer pool, size = 8.0M
+120615 18:27:47  InnoDB: Completed initialization of buffer pool
+120615 18:27:47  InnoDB: Started; log sequence number 0 6970915
+120615 18:27:47 [Note] Event Scheduler: Loaded 0 events
+120615 18:27:47 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120615 18:28:01 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120615 18:28:01 [Note] Event Scheduler: Purging the queue. 0 events
+120615 18:28:01  InnoDB: Starting shutdown...
+120615 18:28:02  InnoDB: Shutdown completed; log sequence number 0 6970915
+120615 18:28:02 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120615 18:28:02 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120615 18:29:45 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120615 18:29:45 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120615 18:29:45  InnoDB: Initializing buffer pool, size = 8.0M
+120615 18:29:45  InnoDB: Completed initialization of buffer pool
+120615 18:29:45  InnoDB: Started; log sequence number 0 6970915
+120615 18:29:45 [Note] Event Scheduler: Loaded 0 events
+120615 18:29:45 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120615 18:34:22 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120615 18:34:22 [Note] Event Scheduler: Purging the queue. 0 events
+120615 18:34:22  InnoDB: Starting shutdown...
+120615 18:34:25  InnoDB: Shutdown completed; log sequence number 0 6970915
+120615 18:34:25 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120615 18:34:25 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120615 18:36:17 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120615 18:36:17 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120615 18:36:17  InnoDB: Initializing buffer pool, size = 8.0M
+120615 18:36:17  InnoDB: Completed initialization of buffer pool
+120615 18:36:17  InnoDB: Started; log sequence number 0 6970915
+120615 18:36:17 [Note] Event Scheduler: Loaded 0 events
+120615 18:36:17 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120617 14:20:13 mysqld_safe A mysqld process already exists
+120620 20:11:12 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120620 20:11:12 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120620 20:11:12  InnoDB: Initializing buffer pool, size = 8.0M
+120620 20:11:12  InnoDB: Completed initialization of buffer pool
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+120620 20:11:12  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+120620 20:11:13  InnoDB: Started; log sequence number 0 7065855
+120620 20:11:13 [Note] Event Scheduler: Loaded 0 events
+120620 20:11:13 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120622 23:15:36 mysqld_safe A mysqld process already exists
+120629 20:53:54 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120629 20:53:54 [Note] Event Scheduler: Purging the queue. 0 events
+120629 20:53:54  InnoDB: Starting shutdown...
+120629 20:53:56  InnoDB: Shutdown completed; log sequence number 0 46297378
+120629 20:53:56 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120629 20:53:56 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120629 20:57:51 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120629 20:57:51 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120629 20:57:51  InnoDB: Initializing buffer pool, size = 8.0M
+120629 20:57:51  InnoDB: Completed initialization of buffer pool
+120629 20:57:51  InnoDB: Started; log sequence number 0 46297378
+120629 20:57:51 [Note] Event Scheduler: Loaded 0 events
+120629 20:57:51 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120629 21:13:21 [ERROR] Invalid (old?) table or database name 'sakila.SAVED'
+120629 21:58:55 [ERROR] Invalid (old?) table or database name 'sakila.SAVED'
+120701 15:00:44 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120701 15:00:45 [Note] Event Scheduler: Purging the queue. 0 events
+120701 15:00:45  InnoDB: Starting shutdown...
+120701 15:00:46  InnoDB: Shutdown completed; log sequence number 0 46297388
+120701 15:00:46 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120701 15:00:46 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
+120701 15:05:43 mysqld_safe Starting mysqld daemon with databases from /users/jklein1/mysql/data
+120701 15:05:43 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120701 15:05:43  InnoDB: Initializing buffer pool, size = 8.0M
+120701 15:05:43  InnoDB: Completed initialization of buffer pool
+120701 15:05:43  InnoDB: Started; log sequence number 0 46297388
+120701 15:05:43 [Note] Event Scheduler: Loaded 0 events
+120701 15:05:43 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+23:47:15 UTC - mysqld got signal 4 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+key_buffer_size=16384
+read_buffer_size=262144
+max_used_connections=1
+max_threads=151
+thread_count=0
+connection_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 49897 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x0
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+stack_bottom = 0 thread_stack 0x30000
+/users/jklein1/mysql/libexec/mysqld(my_print_stacktrace+0x29) [0x84bd79]
+/users/jklein1/mysql/libexec/mysqld(handle_fatal_signal+0x483) [0x6a0be3]
+/lib64/libpthread.so.0(+0xf4a0) [0x7f431cf0e4a0]
+/lib64/libc.so.6(__select+0x33) [0x7f431b64e8b3]
+/users/jklein1/mysql/libexec/mysqld(handle_connections_sockets+0x239) [0x5bab29]
+/users/jklein1/mysql/libexec/mysqld(main+0x87d) [0x5c035d]
+/lib64/libc.so.6(__libc_start_main+0xfd) [0x7f431b58ecdd]
+/users/jklein1/mysql/libexec/mysqld() [0x5087b9]
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.
+120703 18:47:15 mysqld_safe Number of processes running now: 0
+120703 18:47:15 mysqld_safe mysqld restarted
+120703 18:47:15 [Warning] '--skip-locking' is deprecated and will be removed in a future release. Please use '--skip-external-locking' instead.
+120703 18:47:16  InnoDB: Initializing buffer pool, size = 8.0M
+120703 18:47:16  InnoDB: Completed initialization of buffer pool
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+120703 18:47:16  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+120703 18:47:16  InnoDB: Started; log sequence number 0 46297398
+120703 18:47:16 [Note] Event Scheduler: Loaded 0 events
+120703 18:47:16 [Note] /users/jklein1/mysql/libexec/mysqld: ready for connections.
+Version: '5.1.61'  socket: 'mysql.sock'  port: 0  Source distribution
+120708 16:31:58 mysqld_safe A mysqld process already exists
+120716 19:25:29 mysqld_safe A mysqld process already exists
+120716 19:25:58 [Note] /users/jklein1/mysql/libexec/mysqld: Normal shutdown
+
+120716 19:25:58 [Note] Event Scheduler: Purging the queue. 0 events
+120716 19:25:58  InnoDB: Starting shutdown...
+120716 19:26:02  InnoDB: Shutdown completed; log sequence number 0 47049711
+120716 19:26:02 [Note] /users/jklein1/mysql/libexec/mysqld: Shutdown complete
+
+120716 19:26:02 mysqld_safe mysqld from pid file /users/jklein1/mysql/data/cold1.useractive.com.pid ended
