@@ -8,5 +8,5 @@ The certificate program included 4 courses:
 
 #### [DBA3](https://github.com/kleinjoshuaa/UIUC_Certificate/tree/master/dba3_files)  -  Data Warehousing, ETL, and the OLAP/Star Schema model
 
-#### [DBA4](https://github.com/kleinjoshuaa/UIUC_Certificate/tree/master/dba4_files)  - MDX, Pentaho Mondrian, JPivot, the OLAP Cube, Microsft Analysis Services
+#### [DBA4](https://github.com/kleinjoshuaa/UIUC_Certificate/tree/master/dba4_files)  - MDX, Pentaho Mondrian, JPivot, the OLAP Cube, Microsoft Analysis Services
 
