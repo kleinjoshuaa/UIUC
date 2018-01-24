@@ -17,7 +17,8 @@ Now you may be asking yourself, well, what is a dimension? What is a fact? Simpl
 *   Type 0: Do nothing, don't update the dimension when it changes.
 *   Type 1: Update the dimension when it changes. Keep no trace of the previous value for that dimension.
 *   Type 2: Add a new row when the dimension changes, use 'start_date' and 'end_date' columns to keep track of valid dates for the dimension values in all rows.
-*   Type 3: Use 'current_[col_name]' and 'previous_[col_name]' columns to update when a dimension ([col_name]) value changes. The row may or may not have an effective date column.*   Type 4: The dimension table always contains the most up to date values for the dimensions, and the history is stored in a different table with an additional 'change_date' column so that one knows when it changed.
+*   Type 3: Use 'current_[col_name]' and 'previous_[col_name]' columns to update when a dimension ([col_name]) value changes. The row may or may not have an effective date column.
+*   Type 4: The dimension table always contains the most up to date values for the dimensions, and the history is stored in a different table with an additional 'change_date' column so that one knows when it changed.
 
 It is possible to create a dimension table with different columns being different SCD types as well. For example in the dimCustomer dimension for the Sakila data warehouse you could make your Last_Name column in a dimension table Type 1 if you don't really care when people changed their name, but make their address column a Type 2 because those are more important to keep track of where your customers are moving over time.
 
