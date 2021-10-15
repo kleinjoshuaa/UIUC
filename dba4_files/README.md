@@ -8,7 +8,7 @@ MDX stands for Multi-Dimensional eXpressions. It is a language that is based on 
 
 This organization of data is called an [OLAP cube](http://en.wikipedia.org/wiki/OLAP_cube). The cube is a way to visualize how the data in a data warehouse is structured. Cubes are defined in a schema xml file that defines how the tables in the OLAP database relate to each other.
 
-<p> In this course, since we didn't have access to a Microsoft SQL Server, we used [Pentaho Mondrian](http://mondrian.pentaho.com/) which is an open source OLAP server that is compatible with the MDX language specification. To interrogate the data warehouse, we used [JPivot](http://jpivot.sourceforge.net/), which is an open source solution for navigating and querying data warehouses. 
+In this course, since we didn't have access to a Microsoft SQL Server, we used [Pentaho Mondrian](http://mondrian.pentaho.com) which is an open source OLAP server that is compatible with the MDX language specification. To interrogate the data warehouse, we used [JPivot](http://jpivot.sourceforge.net) , which is an open source solution for navigating and querying data warehouses. 
 
  It works like this. MDX Queries are sent to the OLAP server. Then the OLAP server consults a schema to determine how best it can answer the query. After that, the server will then either consult it’s internal cache or generate SQL to answer the query. Then, after that the data is returned to you. 
 
